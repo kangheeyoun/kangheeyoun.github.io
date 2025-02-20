@@ -1,0 +1,188 @@
+/***font***/
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+.inter-tight-uniquifier{
+    font-family: "Inter Tight", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'HSSanTokki20-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/***basic***/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+ul{
+    list-style-type: none;
+}
+
+/***main***/
+/***nav***/
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+}
+main > .all{
+    display: flex;
+}
+main > nav > ul{
+    background-color: #ffffff;
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-around;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+main > nav > ul > li{
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main > nav > ul > li:hover{
+    color: #fff;
+    background-color: #FFC0CB;
+    border-radius: 15px;
+}
+main > .all > .h2-all{
+    margin: 50px;
+}
+main > .all > .h2-all > h2{
+    font-family: 'PyeongChangPeace-Bold';
+    color: #fff;
+    font-size: 100px;
+}
+main > .all > .h2-all > h2:nth-of-type(2){
+    font-size: 80px;
+    color: #00B8D4;
+}
+
+main > .all > .main-all > img{
+    width: 480px;
+    height: 600px;
+    border-radius: 15px;
+    margin-left: 300px;
+    margin-top: 200px;
+}
+main > .all > .main-all > .main-a{
+    display: flex;
+}
+main > .all > .main-all > .main-a > p{
+    font-family: 'HSSanTokki20-Regular';
+    color: #fff;
+}
+/***About***/
+section{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFC0CB;
+    align-items: center;
+}
+section > .img-1{
+    padding-left: 200px;
+}
+section > h2{
+    font-family: 'HSSanTokki20-Regular';
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 200px;
+    color: #000;
+    margin: 50px;
+}
+section > h2 > hr{
+    background-color: #000;
+    width: 20%;
+    margin-top: 110px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 20px;
+    border: none;
+    border-radius: 7px;
+}
+
+/*** clone-site ***/
+.clone-Site{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: #000000;
+}
+.clone-Site > h2{
+    font-family: 'PyeongChangPeace-Bold';
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 80px;
+    padding: 50px;
+}
+.clone-Site > .clone-wrap1,
+.clone-Site > .clone-wrap2,
+.clone-Site > .clone-wrap3,
+.clone-Site > .clone-wrap4{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.clone-Site > .clone-wrap1 > .clone-a,
+.clone-Site > .clone-wrap2 > .clone-b,
+.clone-Site > .clone-wrap3 > .clone-c,
+.clone-Site > .clone-wrap4 > .clone-d{
+    padding-right: 50px;
+    padding-bottom: 200px;
+    /* text-align: center; */
+    color: #ffffff;
+}
+.clone-Site > .clone-wrap1 > .clone-a > button,
+.clone-Site > .clone-wrap2 > .clone-b > button,
+.clone-Site > .clone-wrap3 > .clone-c > button,
+.clone-Site > .clone-wrap4 > .clone-d > button{
+    width: 150px;
+    height: 30px;
+    margin: 50px 0;
+    cursor: pointer;
+    border: none;
+    background-color: #FFC0CB;
+    border-radius: 10px;
+}
+.clone-Site > .clone-wrap1 > .clone-a > h3,
+.clone-Site > .clone-wrap2 > .clone-b > h3,
+.clone-Site > .clone-wrap3 > .clone-c> h3,
+.clone-Site > .clone-wrap4 > .clone-d > h3{
+    font-family: 'HSSanTokki20-Regular';
+    font-size: 40px;
+    color: #fff;
+}
+.clone-Site > .clone-wrap1 > p,
+.clone-Site > .clone-wrap2 > p,
+.clone-Site > .clone-wrap3 > p,
+.clone-Site > .clone-wrap4 > p{
+    color: #fff;
+}
+.clone-Site > .clone-wrap1 > img,
+.clone-Site > .clone-wrap2 > img,
+.clone-Site > .clone-wrap3 > img,
+.clone-Site > .clone-wrap4 > img{
+    /* width: 900px; */
+    width: 800px;
+    height: 600px;
+}
+
+
