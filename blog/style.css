@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'TTBookendBatangR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+header{
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/페이지1.png);
+  background-size: cover;
+  position: relative;
+}
+header > .gnb{
+  background-color: rgb(127, 208, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 75%;
+}
+header > .gnb > a > h1{
+  color: aliceblue;
+  font-size: 45px;
+}
+header > .gnb > ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+header > .name{
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 18%;
+}
+header > .name p:nth-of-type(1),
+header > .name p:nth-of-type(2),
+header > .name p:nth-of-type(3){
+  font-family: 'TTBookendBatangR';
+  font-size: 100px;
+  text-shadow: 5px 5px gray;
+}
+header > .name p:nth-of-type(4){
+  font-size: 39px;
+  color: aliceblue;
+}
+header > .name > p:nth-of-type(4) > b{
+  color: black;
+}
+header > .btn1{
+  margin: 30px auto;
+  width: 500px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 3%;
+  border: 3px solid white;
+  opacity: 85%;
+}
+header > .btn1 > a > b{
+  font-size: 39px;
+  padding: 150px 150px 150px 150px;
+  color: white;
+  line-height: 200px;
+}
+
+/* main */
+main{
+  width: 1440px;
+  height: 900px;
+  margin: 50px auto;  
+}
+main > .b1,
+main > .b2{  
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;  
+}
+main > .b1 > .box1,
+main > .b2 > .box2{
+  width: 55%;
+  height: 400px;
+}
+main > .b1 > .t1,
+main > .b2 > .t2{
+  width: 45%;
+  height: 400px;
+}
+
+main > .b1 > .t1 > p,
+main > .b2 > .t2 > p{
+  margin: 40px 0 40px 0;
+  font-size: 17px;
+  font-weight: 1000;
+  color: rgb(81, 79, 88);
+}
+
+main > .b1 > .box1{  
+  background-image: url(./images/메인\ 박스1.png);
+  background-size: cover;
+}
+main > .b2 > .box2{
+  background-image: url(./images/메인\ 박스2.png);
+  background-size: cover;
+}
+
+main > .b1 > .t1 > b{
+  font-size: 50px;
+}
+
+main > .b1 > .t1 > hr{
+  width: 250px;
+  height: 3px;
+  background-color: black;
+  margin: 30px 0;
+}
+
+main > .b2 > .t2 > b{
+  font-size: 50px;
+}
+
+main > .b2 > .t2 > hr{
+  width: 250px;
+  height: 3px;
+  background-color: black;
+  margin: 30px 0;
+}
+main > .b1 > .t1 > a,
+main > .b2 > .t2 > a{
+  display: block;
+  margin: 30px 0;
+  width: 200px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid black;
+  opacity: 75%;
+  text-align: center;
+  line-height: 50px;
+}
+
+
+/* article */
+article{
+  height: 900px;
+  position: relative;
+}
+article > .b3{
+  width: 100%;
+  height: 450px;
+  background-image: url(./images/박스3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+article > .b3 > .t3{
+  color: white;
+  padding: 50px;
+}
+article > .b3 > .t3 > b{
+  font-size: 50px;
+}
+article > .b3 > .t3 > hr{
+  width: 250px;
+  height: 3px;
+  background-color: white;
+  margin: 30px 0;
+}
+article > .b3 > .t3 > a{
+  display: block;
+  margin: 30px 0;
+  width: 200px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+  opacity: 75%;
+  text-align: center;
+  line-height: 50px;
+}
+article > .box3{
+  display: flex;
+  width: 50%;
+  height: 450px;
+  background-color: rgb(182, 180, 206);
+  position: absolute;
+  top: 0;
+  opacity: 60%;
+}
+article > .box4
