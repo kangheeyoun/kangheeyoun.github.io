@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -111,3 +112,118 @@ hr{
     font-weight: 500;
     font-size: 20px;
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+} 
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+ul{
+    list-style-type: none;
+}
+/***font***/
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+.inter-tight-uniquifier{
+    font-family: "Inter Tight", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'HSSanTokki20-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  
+/*** start ***/
+.start{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #00B8D4;
+}
+.start > p:nth-child(1){
+    /* font-family: "Inter Tight", serif; */
+    font-family: 'PyeongChangPeace-Bold';
+    font-weight: 400;
+    /* transform: scaleX(1.5) scaleY(2); */
+    font-size: 50px;
+    padding-left: 200px;
+    padding-top: 150px;
+    margin-bottom: -200px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.479), -2px -2px 4px rgba(255, 255, 255, 0.342), 0px 4px 6px rgba(221, 216, 216, 0.2);
+    
+}
+.start > h1{
+    font-family: "Lobster", serif;
+    font-size: 150px;
+    font-weight: 100;
+    line-height: 120px;
+    padding-top: 200px;
+    transform: scaleX(2.2) scaleY(1.5);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.6), 0px 4px 6px rgba(221, 216, 216, 0.2);
+
+  }
+.start > button{
+    /* background-color: transparent; */
+    background-color: #fff;
+    font-family: 'PyeongChangPeace-Bold';
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 190px;
+    width: 350px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    border: solid 3px #d8d8d8;
+    cursor: pointer;
+    /* color: #333333; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0), 0 1px 3px rgba(0, 0, 0, 0.08); */
+  }
+.start > button:hover{
+    background-color: #B0B0B0;
+    color: #fff;
+}
+.fade-out {
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 1s ease-in-out;
+}
+.start > .start-1{
+    display: flex;
+    margin: 80px;
+}
+hr{
+    width: 50%;
+    height: 3px;
+    background-color: #000000;
+    border: none;
+    border-radius: 15px;
+    margin: 10px 20px;
+}
+.start > .start-1{
+    padding-top: 30px;
+    padding-left: 500px;
+}
+.start > .start-1 > p{
+    font-family: "Inter Tight", serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+>>>>>>> e4f19d7ad933747bf5a45c37be01b5ec39700d3e
