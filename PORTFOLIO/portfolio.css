@@ -390,7 +390,20 @@ section > h2 > hr {
     height: 100vh;
     background-color: #ca8a8a;
 }
-
+.ani-all > h2{
+    font-family: 'PyeongChangPeace-Bold';
+    color: #000000;
+    font-size: 80px;
+    padding: 50px;
+    text-align: center;
+}
+.ani-all > .ani-img{
+    display: flex;
+}
+.ani-all > .ani-img > img{
+    width: 500px;
+    height: 450px;
+}
 /*** UI/UX Design ***/
 .ui-all{
     width:100%;
