@@ -387,7 +387,7 @@ section > h2 > hr {
 /*** Animation ***/
 .ani-all{
     width:100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #ca8a8a;
 }
 .ani-all > h2{
@@ -398,11 +398,12 @@ section > h2 > hr {
     text-align: center;
 }
 .ani-all > .ani-img{
-    display: flex;
+    display: block;
 }
 .ani-all > .ani-img > img{
-    width: 500px;
-    height: 450px;
+    width: 1300px;
+    height: 700px;
+    margin-left: 15%;
 }
 /*** UI/UX Design ***/
 .ui-all{
@@ -454,6 +455,32 @@ section > h2 > hr {
         height: 50px;
     }
 
+    /*** JavaScript ***/
+    .js-all{
+        width:100%;
+        height: 100vh;
+        background-color: #000000;
+    }
+    .js-img{
+        margin-left: 7%;
+    }
+    .js-all > h2{
+        font-family: 'PyeongChangPeace-Bold';
+        color: #00B8D4;
+        font-size: 80px;
+        padding: 50px;
+        text-align: center;
+    }
+    .js-all > .js-img > img:nth-child(1),
+    .js-all > .js-img > img:nth-child(2),
+    .js-all > .js-img > img:nth-child(3){
+        width: 300px;
+        height: 600px;
+    }
+    .js-all > .js-img > img:nth-child(4){
+        width: 700px;
+        height: 600px;
+    }
 /* 반응형 디자인 추가 */
 @media screen and (max-width: 1200px) {
     .web-all .slider-for img {
