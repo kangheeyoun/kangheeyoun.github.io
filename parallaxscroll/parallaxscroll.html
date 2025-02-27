@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    header , .content {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header {
+      background-color: orange;
+    }
+    .content {
+      background-size: cover;
+    }
+    .one {
+      background-image: url('./images/p1.png');
+      background-size: cover;
+    }
+    .two {
+      background-image: url('./images/p2.png');
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Parallax Scroll Example</h1>
+  </header>
+  <section class="content one">
+    <h2>section-1</h2>
+  </section>
+  <section>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, consectetur! Dolore, consectetur? Natus a voluptate molestias temporibus debitis eligendi nihil nemo laboriosam repellat, ullam reiciendis explicabo ad, aperiam, numquam quia!</p>
+    <h2>section-2</h2>
+  </section>
+  <section class="content two">
+    <h2>section-3</h2>
+  </section>
+
+  <script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('section');
+    const totalSections = sections.length;
+    const content = document.querySelector('.content');
+
+    // 스크롤 이벤트 처리
+    window.addEventListener('wheel', (event) => {
+      if (event.deltaY > 0) {
+        // 아래로 스크롤
+        currentSection = Math.min(currentSection + 1, totalSections - 1);
+      } else {
+        // 위로 스크롤
+        currentSection = Math.max(currentSection - 1, 0);
+      }
+
+      // 섹션으로 슬라이드
+      const offset = -currentSection * 100; // 100vh씩 이동
+      content.style.transform = `translateY(${offset}vh)`; // 애니메이션 적용
+    });
+  </script>
+</body>
+</html>
