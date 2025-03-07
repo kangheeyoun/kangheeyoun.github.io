@@ -43,7 +43,7 @@ main {
     width: 100%;
     height: 100vh;
     background-color: #000000;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 main > .all {
@@ -122,8 +122,17 @@ section {
 }
 
 section > .img-1 {
-    padding-left: 200px;
+    padding-left: 350px;
+    padding-top: 20px;
 }
+section > .img-2 {
+    padding-left: 10%;
+}
+
+section img{
+    cursor: pointer;
+}
+
 
 section > h2 {
     font-family: 'HSSanTokki20-Regular';
@@ -146,6 +155,41 @@ section > h2 > hr {
     border-radius: 7px;
 }
 
+section > h2 > span {
+    font-size: 200px;
+    padding-left: 50px; 
+    color: #e04b4b;
+}
+
+section .img-1 img,
+section .img-2 img {
+    position: relative;
+    filter: brightness(100%); /* 기본 상태: 밝기 100% */
+}
+
+section .img-1 img:hover,
+section .img-2 img:hover {
+    filter: brightness(5%); /* 마우스를 올렸을 때 이미지 밝기 감소 */
+}
+
+section .img-1 img::after,
+section .img-2 img::after {
+    content: attr(alt); /* alt 속성의 텍스트를 사용하여 멘트를 표시 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+    opacity: 0; /* 기본적으로 보이지 않음 */
+    transition: opacity 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+section .img-1 img:hover::after,
+section .img-2 img:hover::after {
+    opacity: 1; /* 마우스를 올리면 멘트가 보이도록 설정 */
+}
+
 /*** clone-site ***/
 .clone-all {
     width: 100%;
@@ -154,9 +198,17 @@ section > h2 > hr {
 }
 
 .clone-Site {
-    overflow-x: auto; 
+    overflow-x: auto; /* 가로 스크롤 활성화 */
     white-space: nowrap;
     display: flex;
+    scroll-snap-type: x mandatory; /* 수평 스크롤을 정확히 맞추기 위한 속성 */
+    -webkit-overflow-scrolling: touch; /* 터치스크린에서 부드러운 스크롤 */
+    scrollbar-width: auto; /* Firefox에서 스크롤바 표시 */
+    -ms-overflow-style: auto; /* IE에서 스크롤바 표시 */
+}
+
+.clone-Site::-webkit-scrollbar {
+    height: 8px; /* 스크롤바의 높이를 설정 (가로 스크롤바) */
 }
 
 .clone-all > h2 {
@@ -171,10 +223,12 @@ section > h2 > hr {
 .clone-Site > .clone-wrap2,
 .clone-Site > .clone-wrap3,
 .clone-Site > .clone-wrap4 {
-    flex-shrink: 0; 
-    display: flex; 
-    align-items: center; 
-    margin: 0 150px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 요소들이 가로로 정렬되도록 */
+    margin: 0 20px; /* 간격을 줄여서 스크롤을 더 부드럽게 */
+    scroll-snap-align: start; /* 스크롤이 해당 요소에 맞추어 정렬되도록 */
 }
 
 .clone-Site > .clone-wrap1 > .clone-a,
@@ -237,11 +291,13 @@ section > h2 > hr {
 }
 
 
+
 /*** Website Publishing ***/
 .web-all {
     width: 100%;
     background-color: #000000;
-    overflow: hidden;
+    /* overflow: hidden; */
+    text-align: center;
 }
 
 .web-all > h2 {
@@ -269,8 +325,8 @@ section > h2 > hr {
 }
 
 .web-all .slider-for img {
-    width: 800px;
-    height: 450px;
+    width: 70%;
+    height: 600px;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -389,26 +445,74 @@ section > h2 > hr {
 }
 
 /*** Animation ***/
-.ani-all{
-    width:100%;
-    /* height: 100vh; */
-    background-color: #ca8a8a;
+/* 전체 컨테이너 */
+.ani-all {
+    text-align: center;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b47c7c;
 }
-.ani-all > h2{
+
+/* 제목 스타일 */
+.ani-all h2 {
     font-family: 'PyeongChangPeace-Bold';
-    color: #000000;
+    color: #00B8D4;
     font-size: 80px;
     padding: 50px;
     text-align: center;
 }
-.ani-all > .ani-img{
-    display: block;
+
+/* 애니메이션 이미지 컨테이너 */
+.ani-img {
+    justify-content: center;
+    gap: 20px;
+    /* overflow: hidden; */
+    width: 100%;        /* 가로 크기 100% */
+    position: relative;
 }
-.ani-all > .ani-img > img{
-    width: 1300px;
-    height: 700px;
-    margin-left: 15%;
+
+/* 개별 이미지 스타일 */
+.ani-img img {
+    height: 500px;         /* 화면 세로에 맞게 크기 조정 */
+    width: 800px;          /* 가로 크기는 자동으로 조정 */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-in-out forwards;
 }
+
+/* 이미지 애니메이션 효과 (위로 올라오는 애니메이션) */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 이미지별 딜레이 */
+.ani-img img:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.ani-img img:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.ani-img img:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.ani-img img:nth-child(4) {
+    animation-delay: 1.1s;
+}
+
+
+
 /*** UI/UX Design ***/
 .ui-all{
     width:100%;
@@ -535,15 +639,14 @@ section > h2 > hr {
     /****** footer ******/
     footer{
         width:100%;
-        height: 100vh;
-        background-color: #ffffff;
+        height: 100%;
     }
     footer > h2{
         font-family: 'PyeongChangPeace-Bold';
         color: #00B8D4;
         font-size: 200px;
         text-align: center;
-        margin-top: 50px;
+        padding: 350px;
     }
 
 /* 반응형 디자인 추가 */

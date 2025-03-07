@@ -29,3 +29,83 @@ rgb(255, 255, 255)
 기본 블랙 (#000000)
 Hex: #000000
 rgb(0, 0, 0)
+
+
+
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFC0CB;
+    align-items: center;
+}
+
+section > .img-1 {
+    padding-left: 350px;
+    padding-top: 20px;
+}
+section > .img-2 {
+    padding-left: 10%;
+}
+
+section img{
+    cursor: pointer;
+}
+
+
+section > h2 {
+    font-family: 'HSSanTokki20-Regular';
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 200px;
+    color: #000;
+    margin: 50px;
+}
+
+section > h2 > hr {
+    background-color: #000;
+    width: 20%;
+    margin-top: 110px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 20px;
+    border: none;
+    border-radius: 7px;
+}
+
+section > h2 > span {
+    font-size: 200px;
+    padding-left: 50px; 
+    color: #e04b4b;
+}
+
+section .img-1 img,
+section .img-2 img {
+    position: relative;
+    filter: brightness(100%); /* 기본 상태: 밝기 100% */
+}
+
+section .img-1 img:hover,
+section .img-2 img:hover {
+    filter: brightness(5%); /* 마우스를 올렸을 때 이미지 밝기 감소 */
+}
+
+section .img-1 img::after,
+section .img-2 img::after {
+    content: attr(alt); /* alt 속성의 텍스트를 사용하여 멘트를 표시 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+    opacity: 0; /* 기본적으로 보이지 않음 */
+    transition: opacity 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+section .img-1 img:hover::after,
+section .img-2 img:hover::after {
+    opacity: 1; /* 마우스를 올리면 멘트가 보이도록 설정 */
+}
